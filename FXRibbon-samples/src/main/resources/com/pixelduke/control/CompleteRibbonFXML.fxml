@@ -6,10 +6,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import com.pixelduke.control.Ribbon?>
-<?import com.pixelduke.control.ribbon.RibbonTab?>
-<?import com.pixelduke.control.ribbon.RibbonGroup?>
 <?import com.pixelduke.control.ribbon.Column?>
+<?import com.pixelduke.control.ribbon.RibbonGroup?>
 <?import com.pixelduke.control.ribbon.RibbonItem?>
+<?import com.pixelduke.control.ribbon.RibbonMenu?>
+<?import com.pixelduke.control.ribbon.RibbonTab?>
+<?import com.pixelduke.control.ribbon.QuickAccessBar?>
 <?import javafx.collections.*?>
 
 <!--
@@ -39,7 +41,6 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<?import com.pixelduke.control.ribbon.QuickAccessBar?>
 <BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="410.0" xmlns:fx="http://javafx.com/fxml">
     <top>
         <Ribbon>
@@ -71,6 +72,15 @@
                 </QuickAccessBar>
             </quickAccessBar>
             <tabs>
+                <RibbonMenu text="Options">
+                    <items>
+                        <MenuItem text="New" />
+                        <MenuItem text="Load..." />
+                        <MenuItem text="Save" />
+                        <MenuItem text="Save As..." />
+                        <MenuItem text="Close" />
+                    </items>
+                </RibbonMenu>
                 <RibbonTab text="Home">
                     <ribbonGroups>
                         <RibbonGroup title="File">
