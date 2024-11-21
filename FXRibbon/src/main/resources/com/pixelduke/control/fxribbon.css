@@ -25,8 +25,7 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-.ribbon
-{
+.ribbon {
     -fx-background: white;
 
 
@@ -48,8 +47,7 @@
 
 }
 
-.ribbon > .outer-container > .tab-pane > .tab-content-area
-{
+.ribbon > .outer-container > .tab-pane > .tab-content-area {
     -fx-background-color: #cccccc, white;
     -fx-background-insets: 0, 0 0 1 0;
 }
@@ -64,7 +62,7 @@
  *                                                                             *
  ******************************************************************************/
 
-.ribbon .label{
+.ribbon .label {
     -fx-font-family: "Segoe UI";
     -fx-font-size: 1em;
     -fx-text-fill: CONTROLS_LABEL_COLOR;
@@ -210,8 +208,7 @@
  * Ribbon Item                                                                 *
  *                                                                             *
  ******************************************************************************/
-.ribbon-item .label
-{
+.ribbon-item .label {
     -fx-padding: 0 5px 0 0;
 }
 
@@ -222,7 +219,7 @@
  *                                                                             *
  ******************************************************************************/
 
-.ribbon-group .button{
+.ribbon-group .button {
     -fx-border-color: transparent !important;
     -fx-border-width: 0 !important;
 
@@ -239,45 +236,39 @@
     -shrink-animate-on-press: false !important;
 }
 
-.ribbon-group .button.big
-{
+.ribbon-group .button.big {
     -fx-min-width: 50px;
     -fx-max-width: 50px;
     -fx-min-height: 100px;
     -fx-max-height: 100px;
 }
 
-.ribbon-group .button:hover{
+.ribbon-group .button:hover {
     -fx-background-color: RIBBON_BUTTON_HIGHLIGHT_COLOR !important;
 }
 
-.ribbon-group .button:pressed, .ribbon-group .button:default:hover:pressed
-{
-    -fx-background-color: black !important;
-    -fx-text-fill: white !important;
+.ribbon-group .button:pressed, .ribbon-group .button:default:hover:pressed {
+    -fx-background-color: RIBBON_BUTTON_SELECTED_COLOR !important;
+    -fx-text-fill: CONTROLS_LABEL_COLOR !important;
 }
 
-.ribbon-group .button:focused
-{
-    -fx-border-color: transparent, black !important;
+.ribbon-group .button:focused {
+    -fx-border-color: transparent, lightgray !important;
     -fx-border-width: 1, 1 !important;
     -fx-border-style: solid, segments(1, 2) !important;
     -fx-border-radius: 0, 0 !important;
-    -fx-border-insets: 1 1 1 1, 0 !important;
+    -fx-border-insets: -1 !important;
 }
 
-.ribbon-group .button:disabled, .ribbon-group > .button:default:disabled
-{
+.ribbon-group .button:disabled, .ribbon-group > .button:default:disabled {
     -fx-opacity: 0.4 !important;
 }
-
 
 /*******************************************************************************
  *                                                                             *
  * Toggle Button                                                               *
  *                                                                             *
  ******************************************************************************/
-
 .ribbon-group .toggle-button {
     -fx-padding: 5 22 5 22 !important;
     -fx-border-style: null !important;
@@ -307,19 +298,18 @@
 }
 
 .ribbon-group .toggle-button:focused {
-    -fx-border-color: transparent, black !important;
+    -fx-border-color: transparent, lightgray !important;
     -fx-border-width: 1, 1 !important;
     -fx-border-style: solid, segments(1, 2) !important;
     -fx-border-radius: 0, 0 !important;
-    -fx-border-insets: 1 1 1 1, 0 !important;
+    -fx-border-insets: -1 !important;
 }
 
 .ribbon-group .toggle-button:hover, .ribbon-group .toggle-button:hover:selected {
     -fx-background-color: RIBBON_BUTTON_HIGHLIGHT_COLOR !important;
 }
 
-.ribbon-group .toggle-button:pressed, .ribbon-group .toggle-button:pressed:selected
-{
+.ribbon-group .toggle-button:pressed, .ribbon-group .toggle-button:pressed:selected {
     -fx-background-color: black !important;
     -fx-text-fill: white !important;
 }
@@ -371,10 +361,9 @@
  * MenuButton                                                                  *
  *                                                                             *
  ******************************************************************************/
-
-.ribbon-group > .ribbon-group-content > .menu-button {
+.ribbon-group .menu-button {
     -fx-border-color: transparent !important;
-    -fx-border-width: 2 !important;
+    -fx-border-width: 0 !important;
 
     -fx-background-radius: 0 !important;
 
@@ -382,51 +371,49 @@
 
     -fx-font-family:"Segoe UI" !important;
     -fx-font-size: 1em !important; /* 12 */
-    -fx-text-fill: black !important;
+    -fx-text-fill: CONTROLS_LABEL_COLOR !important;
 
-    -fx-min-width: 100px !important;
-    -fx-pref-width: 140px !important;
-    -fx-max-width: 180px !important;
-    -fx-min-height: 100px !important;
-    -fx-max-height: 100px !important;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em !important; /* 4 8 4 8 */
+
+    -shrink-animate-on-press: false !important;
 }
 
-.ribbon-group > .ribbon-group-content > .menu-button:hover{
+.ribbon-group .menu-button.big {
+    -fx-min-width: 50px;
+    -fx-max-width: 50px;
+    -fx-min-height: 100px;
+    -fx-max-height: 100px;
+}
+
+.ribbon-group .menu-button:hover{
     -fx-background-color: RIBBON_BUTTON_HIGHLIGHT_COLOR !important;
 }
 
-.ribbon-group > .ribbon-group-content > .menu-button:pressed, .ribbon-group > .menu-button:default:hover:pressed
-{
-    -fx-background-color: black !important;
-    -fx-text-fill: white !important;
+.ribbon-group .menu-button:pressed, .ribbon-group > .menu-button:default:hover:pressed {
+    -fx-background-color: RIBBON_BUTTON_SELECTED_COLOR !important;
+    -fx-text-fill: CONTROLS_LABEL_COLOR !important;
 }
 
-.ribbon-group > .ribbon-group-content > .menu-button:pressed > .arrow-button > .arrow{
-    -fx-background-color: white, white !important;
-}
-
-.ribbon-group > .ribbon-group-content > .menu-button:focused
+.ribbon-group .menu-button:focused
 {
-    -fx-border-color: transparent, black !important;
+    -fx-border-color: transparent, lightgray !important;
     -fx-border-width: 1, 1 !important;
     -fx-border-style: solid, segments(1, 2) !important;
     -fx-border-radius: 0, 0 !important;
-    -fx-border-insets: 1 1 1 1, 0 !important;
+    -fx-border-insets: -1 !important;
 }
 
-.ribbon-group > .ribbon-group-content > .menu-button:disabled, .ribbon-group > .menu-button:default:disabled
-{
+.ribbon-group .menu-button:disabled, .ribbon-group .menu-button:default:disabled {
     -fx-opacity: 0.4 !important;
     -fx-text-fill: #212121 !important;
 }
 
-.ribbon-group > .ribbon-group-content > .menu-button:default
-{
+.ribbon-group .menu-button:default {
     -fx-background-color: #008287 !important;
     -fx-text-fill: #ffffff !important;
 }
 
-.ribbon-group > .ribbon-group-content > .menu-button:default:hover{
+.ribbon-group .menu-button:default:hover{
     -fx-background-color: #219297 !important;
 }
 
@@ -492,14 +479,12 @@
     -fx-background-color: RIBBON_BUTTON_HIGHLIGHT_COLOR !important;
 }
 
-.quick-access-bar > .outer-container .button:pressed
-{
+.quick-access-bar > .outer-container .button:pressed {
     -fx-background-color: black !important;
     -fx-text-fill: white !important;
 }
 
-.quick-access-bar > .outer-container .button:focused
-{
+.quick-access-bar > .outer-container .button:focused {
     -fx-border-color: transparent, black !important;
     -fx-border-width: 1, 1 !important;
     -fx-border-style: solid, segments(1, 2) !important;
@@ -507,8 +492,7 @@
     -fx-border-insets: 1 1 1 1, 0 !important;
 }
 
-.quick-access-bar > .outer-container .button:disabled
-{
+.quick-access-bar > .outer-container .button:disabled {
     -fx-opacity: 0.4 !important;
 }
 
@@ -545,8 +529,24 @@
     -fx-padding: 0 0 5px 0;
 }
 
-.ribbon-group-content > .column
-{
+.ribbon-group-content > .column {
     -fx-padding: 16px 0px 16px 10px;
     -fx-spacing: 6;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * RibbonMenu                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+.ribbon-menu {
+    -fx-background-color: transparent, transparent, RIBBON_BUTTON_SELECTED_COLOR;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-padding: 0.083333em 1.25em 0.0769em 1.25em; /* 1 15 0.99 15 */
+}
+
+.ribbon-menu .tab-label {
+    -fx-text-fill: TITLES_COLOR !important;
+    -fx-font-size: 1em !important; /* 12 */
+    -fx-font-family: "Segoe UI";
 }

@@ -29,6 +29,7 @@ package impl.com.pixelduke.skin;
 
 import com.pixelduke.control.Ribbon;
 import com.pixelduke.control.ribbon.RibbonTab;
+import com.pixelduke.control.ribbon.RibbonTabPane;
 import javafx.collections.ListChangeListener;
 import javafx.scene.control.SkinBase;
 import javafx.scene.control.TabPane;
@@ -47,7 +48,7 @@ public class RibbonSkin extends SkinBase<Ribbon> {
      */
     public RibbonSkin(Ribbon control) {
         super(control);
-        tabPane = new TabPane();
+        tabPane = new RibbonTabPane();
         outerContainer = new VBox();
 
         control.getTabs().addListener(this::tabsChanged);
