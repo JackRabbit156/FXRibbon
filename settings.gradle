@@ -1,1 +1,2 @@
-include 'fxribbon', 'fxribbon-samples'
+rootProject.name = 'fxribbon-master'
+
